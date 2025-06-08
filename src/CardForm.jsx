@@ -45,9 +45,13 @@ function CardForm() {
 
     WriteToTxt(state);
 
-    alert("Submitted");
+    if (state.rytas || state.diena || state.vakaras) {
+      alert("Submitted");
 
-    window.location.reload();
+      window.location.reload();
+    }
+
+    alert("Please select time of day");
   };
 
   return (
@@ -164,19 +168,19 @@ function CardForm() {
       </div>
 
       <div className="notes">
-        <label htmlFor="notes">Notes:</label>
-        <br />
         <textarea
           id="notes"
           value={notes}
           onChange={(e) => setNotes(e.target.value)}
-          placeholder=""
-          rows={5}
-          cols={30}
+          placeholder="Notes Notes Notes Notes Notes Notes Notes Notes Notes Notes Notes Notes Notes Notes Notes"
+          rows={3}
+          cols={40}
         />
       </div>
 
-      <button className="submitButton" onClick={handleSubmit}>Submit</button>
+      <button className="submitButton" onClick={handleSubmit}>
+        Submit
+      </button>
     </div>
   );
 }
