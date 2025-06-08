@@ -14,7 +14,7 @@ function CardForm() {
   const [isDiena, setDiena] = useState(false);
   const [isVakaras, setVakaras] = useState(false);
 
-  const [uvamin, setUvamin] = useState("2");
+  const [uvamin, setUvamin] = useState("1");
   const [angocin, setAngocin] = useState("0");
 
   const [simptomai, setSimptomai] = useState(false);
@@ -49,9 +49,9 @@ function CardForm() {
       alert("Submitted");
 
       window.location.reload();
+    } else {
+      alert("Please select time of day");
     }
-
-    alert("Please select time of day");
   };
 
   return (
@@ -84,7 +84,7 @@ function CardForm() {
         </button>
       </div>
 
-      <div className="vaistaiWrapper">
+      <div className="drugWrapper">
         <div className="drug">
           <p>Uvamin</p>
           {Array.from({ length: uvaminButtonNumber }).map((_, i) => {

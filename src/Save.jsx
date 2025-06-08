@@ -25,7 +25,7 @@ function sendToGoogleSheet(dienosDalis, state) {
   };
 
   fetch(
-    "https://script.google.com/macros/s/AKfycbx-3b9s4NMIn4_nM-3TYq6nwzByoBqLhNuD0R2ifRK9hFE3QwvXoP0qHBDpeqtKZFoyIw/exec",
+    "https://script.google.com/macros/s/AKfycbwo0_I7EhT-J8BdHICj-Hiz9zUW-Ok98g2phEmw81PKCCa6yDsFpRPocbn5-PxjaQr2dA/exec",
     {
       method: "POST",
       mode: "no-cors",

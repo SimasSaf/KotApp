@@ -92,7 +92,7 @@
 }
 
 .drugButton--selected {
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 1);
   background: linear-gradient(
     to bottom,
     #ffffff 0%,
