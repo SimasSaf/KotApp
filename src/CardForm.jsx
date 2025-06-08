@@ -44,6 +44,10 @@ function CardForm() {
     };
 
     WriteToTxt(state);
+
+    alert("Submitted");
+
+    window.location.reload();
   };
 
   return (
@@ -172,9 +176,9 @@ function CardForm() {
         />
       </div>
 
-      <button onClick={handleSubmit}>Submit</button>
+      <button className="submitButton" onClick={handleSubmit}>Submit</button>
     </div>
   );
 }
-//ye
+
 export default CardForm;
