@@ -1,0 +1,87 @@
+.wholeForm {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 800px;
+  height: 100%;
+  min-height: 100%;
+  box-sizing: border-box;
+  padding: 2vh 2vw;
+  gap: 2vh;
+  justify-content: space-between;
+  -webkit-tap-highlight-color: transparent;
+}
+
+*:focus:not(:focus-visible) {
+  outline: none;
+  border: none;
+}
+
+*:not(:focus) {
+  outline: none;
+  border: none;
+}
+
+[class*="--selected"] {
+  background-color: rgb(27, 33, 110);
+}
+
+.datePicker {
+  align-self: center;
+  font-size: clamp(2rem, 5vw, 5rem);
+  background-color: transparent;
+  border: none;
+  padding: 1vh 2vw;
+}
+
+.timeOfDayWrapper {
+  display: flex;
+  align-self: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.timeOfDayWrapper > * {
+  cursor: pointer;
+  font-size: clamp(1rem, 2.5vw, 2rem);
+  padding: 0.5vh 1vw;
+}
+
+.rytas--selected,
+.diena--selected,
+.vakaras--selected {
+  color: white;
+  border-radius: 0.5rem;
+}
+
+.drug {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.drug p {
+  font-size: clamp(1rem, 2vw, 1.5rem);
+}
+
+.drugButton {
+  margin: 0.5rem;
+  border-radius: 100%;
+  width: clamp(40px, 8vw, 80px);
+  height: clamp(40px, 8vw, 80px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.simptomaiButton--selected {
+  background-color: rgb(100, 10, 10);
+}
+
+.sideEffectWrapper button {
+  border-radius: 100%;
+  margin-right: 1rem;
+  margin-left: 1rem;
+}

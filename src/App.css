@@ -1,0 +1,19 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+#root {
+  overflow-y: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  max-width: 90vw;
+  margin: 0 auto;
+  padding: 2vh 2vw;
+  text-align: center;
+  box-sizing: border-box;
+}
