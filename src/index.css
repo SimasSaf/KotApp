@@ -13,6 +13,21 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
+  background: linear-gradient(
+    135deg,
+    #000000,
+    #0e0130,
+    #000000,
+    #0a031b,
+    #000000,
+    #0e0130,
+    #000000
+  );
+  background-size: 400% 400%;
+  animation: bgFlow 20s ease infinite;
+}
+
+.day-theme {
   background: linear-gradient(135deg, #ff0000, #4207e4, #910773, #2c9e09);
   background-size: 400% 400%;
   animation: bgFlow 20s ease infinite;

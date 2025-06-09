@@ -43,12 +43,12 @@ function CardForm() {
       notes: notes,
     };
 
-    WriteToTxt(state);
-
     if (state.rytas || state.diena || state.vakaras) {
+      WriteToTxt(state);
+
       alert("Submitted");
 
-      window.location.reload();
+      //window.location.reload();
     } else {
       alert("Please select time of day");
     }
@@ -62,7 +62,6 @@ function CardForm() {
         onChange={(e) => setDate(e.target.value)}
         defaultValue={today}
       />
-
       <div className="timeOfDayWrapper">
         <button
           onClick={() => setRytas((prev) => !prev)}
@@ -83,7 +82,6 @@ function CardForm() {
           Vakaras
         </button>
       </div>
-
       <div className="drugWrapper">
         <div className="drug">
           <p>Uvamin</p>
@@ -122,6 +120,34 @@ function CardForm() {
           })}
         </div>
       </div>
+
+      {/* <div>
+        <button className="front">1</button>
+        <button className="middle">2</button>
+        <button className="middle">3</button>
+        <button className="middle">4</button>
+        <button className="end">5</button>
+      </div> */}
+
+      {/* <input
+        id="scale-slider"
+        type="range"
+        min="0"
+        max="5"
+        step="1"
+        style={{ width: "100%" }}
+      />
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "space-between",
+          fontSize: "14px",
+        }}
+      >
+        {[0, 1, 2, 3, 4, 5].map((num) => (
+          <span key={num}>{num}</span>
+        ))}
+      </div> */}
 
       <button
         className={`simptomaiButton ${
@@ -166,7 +192,6 @@ function CardForm() {
           🚿
         </button>
       </div>
-
       <div className="notes">
         <textarea
           id="notes"
@@ -177,7 +202,6 @@ function CardForm() {
           cols={40}
         />
       </div>
-
       <button className="submitButton" onClick={handleSubmit}>
         Submit
       </button>
