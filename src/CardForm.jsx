@@ -17,12 +17,14 @@ function CardForm() {
   const [uvamin, setUvamin] = useState("1");
   const [angocin, setAngocin] = useState("0");
 
-  const [simptomai, setSimptomai] = useState(false);
+  const [simptomai, setSimptomai] = useState(0);
 
   const [sportas, setSportas] = useState(false);
   const [alkoholis, setAlkoholis] = useState(false);
   const [kava, setKava] = useState(false);
   const [dusas, setDusas] = useState(false);
+  const [spicy, setSpicy] = useState(false);
+  const [citrina, setCitrina] = useState(false);
 
   const [notes, setNotes] = useState("");
 
@@ -40,6 +42,8 @@ function CardForm() {
       alkoholis: alkoholis,
       kava: kava,
       dusas: dusas,
+      spicy: spicy,
+      citrina: citrina,
       notes: notes,
     };
 
@@ -121,42 +125,63 @@ function CardForm() {
         </div>
       </div>
 
-      {/* <div>
-        <button className="front">1</button>
-        <button className="middle">2</button>
-        <button className="middle">3</button>
-        <button className="middle">4</button>
-        <button className="end">5</button>
-      </div> */}
+      <div>
+        <p className="simptomai">Simptomai</p>
 
-      {/* <input
-        id="scale-slider"
-        type="range"
-        min="0"
-        max="5"
-        step="1"
-        style={{ width: "100%" }}
-      />
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "space-between",
-          fontSize: "14px",
-        }}
-      >
-        {[0, 1, 2, 3, 4, 5].map((num) => (
-          <span key={num}>{num}</span>
-        ))}
-      </div> */}
+        <button
+          className={`slider-left ${
+            simptomai >= 0 ? "slider-left--selected" : ""
+          } ${simptomai === 0 ? "slider-left--selected-equal" : ""}`}
+          onClick={() => setSimptomai(0)}
+        >
+          0
+        </button>
 
-      <button
-        className={`simptomaiButton ${
-          simptomai === true ? "simptomaiButton--selected" : ""
-        }`}
-        onClick={() => setSimptomai((prev) => !prev)}
-      >
-        Simptomai
-      </button>
+        <button
+          className={`slider-middle ${
+            simptomai >= 1 ? "slider-middle--selected" : ""
+          } ${simptomai === 1 ? "slider-middle--selected-equal" : ""}`}
+          onClick={() => setSimptomai(1)}
+        >
+          1
+        </button>
+
+        <button
+          className={`slider-middle ${
+            simptomai >= 2 ? "slider-middle--selected" : ""
+          } ${simptomai === 2 ? "slider-middle--selected-equal" : ""}`}
+          onClick={() => setSimptomai(2)}
+        >
+          2
+        </button>
+
+        <button
+          className={`slider-middle ${
+            simptomai >= 3 ? "slider-middle--selected" : ""
+          } ${simptomai === 3 ? "slider-middle--selected-equal" : ""}`}
+          onClick={() => setSimptomai(3)}
+        >
+          3
+        </button>
+
+        <button
+          className={`slider-middle ${
+            simptomai >= 4 ? "slider-middle--selected" : ""
+          } ${simptomai === 4 ? "slider-middle--selected-equal" : ""}`}
+          onClick={() => setSimptomai(4)}
+        >
+          4
+        </button>
+
+        <button
+          className={`slider-right ${
+            simptomai >= 5 ? "slider-right--selected" : ""
+          } ${simptomai === 5 ? "slider-right--selected-equal" : ""}`}
+          onClick={() => setSimptomai(5)}
+        >
+          5
+        </button>
+      </div>
 
       <div className="sideEffectWrapper">
         <button
@@ -190,6 +215,22 @@ function CardForm() {
           onClick={() => setDusas((prev) => !prev)}
         >
           🚿
+        </button>
+        <button
+          className={`sideButton ${
+            spicy === true ? "sideButton--selected" : ""
+          }`}
+          onClick={() => setSpicy((prev) => !prev)}
+        >
+          🌶️
+        </button>
+        <button
+          className={`sideButton ${
+            citrina === true ? "sideButton--selected" : ""
+          }`}
+          onClick={() => setCitrina((prev) => !prev)}
+        >
+          🍋
         </button>
       </div>
       <div className="notes">

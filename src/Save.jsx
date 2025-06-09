@@ -22,6 +22,8 @@ function clearSideEffects(state) {
     alkoholis: false,
     kava: false,
     dusas: false,
+    spicy: false,
+    citrina: false,
   };
 }
 
@@ -36,6 +38,8 @@ async function sendToGoogleSheet(dienosDalis, state) {
     alkoholis: state.alkoholis,
     kava: state.kava,
     dusas: state.dusas,
+    spicy: state.spicy,
+    citrina: state.citrina,
     pastabos: state.notes,
   };
 
