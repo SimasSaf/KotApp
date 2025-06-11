@@ -25,6 +25,7 @@ function CardForm() {
   const [dusas, setDusas] = useState(false);
   const [spicy, setSpicy] = useState(false);
   const [citrina, setCitrina] = useState(false);
+  const [fun, setFun] = useState(false);
 
   const [notes, setNotes] = useState("");
 
@@ -44,6 +45,7 @@ function CardForm() {
       dusas: dusas,
       spicy: spicy,
       citrina: citrina,
+      fun: fun,
       notes: notes,
     };
 
@@ -231,6 +233,14 @@ function CardForm() {
           onClick={() => setCitrina((prev) => !prev)}
         >
           🍋
+        </button>
+        <button
+          className={`sideButton ${
+            citrina === true ? "sideButton--selected" : ""
+          }`}
+          onClick={() => setFun((prev) => !prev)}
+        >
+          🍑
         </button>
       </div>
       <div className="notes">

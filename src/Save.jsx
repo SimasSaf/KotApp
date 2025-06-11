@@ -24,6 +24,7 @@ function clearSideEffects(state) {
     dusas: false,
     spicy: false,
     citrina: false,
+    fun: false,
   };
 }
 
@@ -40,6 +41,7 @@ async function sendToGoogleSheet(dienosDalis, state) {
     dusas: state.dusas,
     spicy: state.spicy,
     citrina: state.citrina,
+    fun: state.fun, 
     pastabos: state.notes,
   };
 
