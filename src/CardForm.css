@@ -30,11 +30,11 @@
 }
 
 .timeOfDayWrapper {
+  margin: 0;
   display: flex;
   align-self: center;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 0.5rem;
 }
 
 .timeOfDayWrapper > * {
@@ -122,10 +122,8 @@
   border-radius: 100%;
   margin-right: 0.25rem;
   margin-left: 0.25rem;
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   animation: shrink-pop 0.3s ease;
-  width: clamp(40px, 8vw, 80px);
-  height: clamp(40px, 8vw, 80px);
 }
 
 .sideButton--selected {

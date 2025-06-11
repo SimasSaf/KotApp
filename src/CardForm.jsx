@@ -235,9 +235,7 @@ function CardForm() {
           🍋
         </button>
         <button
-          className={`sideButton ${
-            citrina === true ? "sideButton--selected" : ""
-          }`}
+          className={`sideButton ${fun === true ? "sideButton--selected" : ""}`}
           onClick={() => setFun((prev) => !prev)}
         >
           🍑
