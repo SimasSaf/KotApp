@@ -1,12 +1,12 @@
-import './App.css'
-import CardForm from './CardForm'
+import "./App.css";
+import CardForm from "./pages/CardForm";
 
 function App() {
   return (
     <>
-    <CardForm/>
+      <CardForm />
     </>
-  )
+  );
 }
 
-export default App
+export default App;

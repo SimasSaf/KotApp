@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./CardForm.css";
-import { WriteToTxt } from "./Save";
+import { WriteToTxt } from "../communication/Save";
+import { AlertMessage } from "../components/AlertMessage";
 
 function CardForm() {
   const uvaminButtonNumber = 3;
@@ -29,40 +30,73 @@ function CardForm() {
 
   const [notes, setNotes] = useState("");
 
+  const [alert, setAlert] = useState(null);
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    var state = {
-      date: date,
+    const state = {
+      date,
       rytas: isRytas,
       diena: isDiena,
       vakaras: isVakaras,
-      uvamin: uvamin,
-      angocin: angocin,
-      simptomai: simptomai,
-      sportas: sportas,
-      alkoholis: alkoholis,
-      kava: kava,
-      dusas: dusas,
-      spicy: spicy,
-      citrina: citrina,
-      fun: fun,
-      notes: notes,
+      uvamin,
+      angocin,
+      simptomai,
+      sportas,
+      alkoholis,
+      kava,
+      dusas,
+      spicy,
+      citrina,
+      fun,
+      notes,
     };
 
     if (state.rytas || state.diena || state.vakaras) {
       WriteToTxt(state);
-
-      alert("Submitted");
-
+      showAlert("Submitted successfully!", "success");
       ResetEverything();
-      // window.location.reload();
     } else {
-      alert("Please select time of day");
+      showAlert("Please select at least one time of day.", "error");
     }
   };
 
+  function ResetEverything() {
+    setDate(today);
+
+    setRytas(false);
+    setDiena(false);
+    setVakaras(false);
+
+    setUvamin("1");
+    setAngocin("0");
+
+    setSimptomai(0);
+
+    setSportas(false);
+    setAlkoholis(false);
+    setKava(false);
+    setDusas(false);
+    setSpicy(false);
+    setCitrina(false);
+    setFun(false);
+
+    setNotes("");
+  }
+
+  function showAlert(message, type) {
+    setAlert({ message, type });
+
+    setTimeout(() => {
+      setAlert(null);
+    }, 3000);
+  }
+
   return (
     <div className="wholeForm">
+      {/* ✅ Display alert here */}
+      {alert && <AlertMessage message={alert.message} type={alert.type} />}
+
       <input
         className="datePicker"
         type="date"
@@ -257,29 +291,6 @@ function CardForm() {
       </button>
     </div>
   );
-
-  function ResetEverything() {
-    setDate(today);
-
-    setRytas(false);
-    setDiena(false);
-    setVakaras(false);
-
-    setUvamin("1");
-    setAngocin("0");
-
-    setSimptomai(0);
-
-    setSportas(false);
-    setAlkoholis(false);
-    setKava(false);
-    setDusas(false);
-    setSpicy(false);
-    setCitrina(false);
-    setFun(false);
-
-    setNotes("");
-  }
 }
 
 export default CardForm;
