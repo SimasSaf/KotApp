@@ -127,7 +127,8 @@
 }
 
 .sideButton--selected {
-  box-shadow: 0 0 7px 0.15rem rgb(102, 171, 189);
+  box-shadow: 0 0 0px 0.15rem rgb(255, 0, 0);
+  background-color: rgb(177, 7, 35);
   animation: pulse-grow 0.4s ease forwards;
 }
 

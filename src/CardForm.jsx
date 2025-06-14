@@ -54,7 +54,8 @@ function CardForm() {
 
       alert("Submitted");
 
-      //window.location.reload();
+      ResetEverything();
+      // window.location.reload();
     } else {
       alert("Please select time of day");
     }
@@ -256,6 +257,29 @@ function CardForm() {
       </button>
     </div>
   );
+
+  function ResetEverything() {
+    setDate(today);
+
+    setRytas(false);
+    setDiena(false);
+    setVakaras(false);
+
+    setUvamin("1");
+    setAngocin("0");
+
+    setSimptomai(0);
+
+    setSportas(false);
+    setAlkoholis(false);
+    setKava(false);
+    setDusas(false);
+    setSpicy(false);
+    setCitrina(false);
+    setFun(false);
+
+    setNotes("");
+  }
 }
 
 export default CardForm;
