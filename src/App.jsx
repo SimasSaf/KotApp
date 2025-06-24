@@ -8,8 +8,11 @@ function App() {
 
   return (
     <div className="App">
-      <button onClick={() => setShowList((prev) => !prev)}>
-        {showList ? "Back to Form" : "View Entries"}
+      <button
+        className="navigationButton"
+        onClick={() => setShowList((prev) => !prev)}
+      >
+        {showList ? "📋" : "📝"}
       </button>
 
       {showList ? <DataList /> : <CardForm />}
