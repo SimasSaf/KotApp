@@ -56,7 +56,7 @@ function CardForm() {
 
     if (state.rytas || state.diena || state.vakaras) {
       WriteToTxt(state);
-      showAlert("Submitted successfully!", "success");
+      showAlert("✅", "success");
       ResetEverything();
     } else {
       showAlert("Please select at least one time of day.", "error");
@@ -92,7 +92,7 @@ function CardForm() {
 
     setTimeout(() => {
       setAlert(null);
-    }, 3000);
+    }, 2500);
   }
 
   return (
