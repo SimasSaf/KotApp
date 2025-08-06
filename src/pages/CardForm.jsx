@@ -27,6 +27,7 @@ function CardForm() {
   const [spicy, setSpicy] = useState(false);
   const [citrina, setCitrina] = useState(false);
   const [fun, setFun] = useState(false);
+  const [timeOfMonth, setTimeOfMonth] = useState(false);
 
   const [notes, setNotes] = useState("");
 
@@ -49,6 +50,7 @@ function CardForm() {
       spicy,
       citrina,
       fun,
+      timeOfMonth,
       notes,
     };
 
@@ -80,6 +82,7 @@ function CardForm() {
     setSpicy(false);
     setCitrina(false);
     setFun(false);
+    setTimeOfMonth(false);
 
     setNotes("");
   }
@@ -94,7 +97,6 @@ function CardForm() {
 
   return (
     <div className="wholeForm">
-      {/* ✅ Display alert here */}
       {alert && <AlertMessage message={alert.message} type={alert.type} />}
 
       <input
@@ -274,6 +276,14 @@ function CardForm() {
           onClick={() => setFun((prev) => !prev)}
         >
           🍑
+        </button>
+        <button
+          className={`sideButton ${
+            timeOfMonth === true ? "sideButton--selected" : ""
+          }`}
+          onClick={() => setTimeOfMonth((prev) => !prev)}
+        >
+          🩸
         </button>
       </div>
       <div className="notes">

@@ -91,7 +91,8 @@ function DataList() {
                 {entry[9] ? "🌶️" : ""}
                 {entry[10] ? "🍋" : ""}
                 {entry[11] ? "🍑" : ""}
-                <p>{entry[12] ? `Notes: ${entry[12]}` : ""}</p>
+                {entry[12] ? "🩸" : ""}
+                <p>{entry[13] ? `Notes: ${entry[13]}` : ""}</p>
 
                 <button
                   className="delete-button"
